@@ -1,0 +1,36 @@
+1. Read multiple json files into a working directory for further converting into a dataset.
+Ans:- I have 3 files Text1.json , text2.json , tex3.json
+e.g:Read text1.json file:-
+ > library("rjson")
+> Results <- fromJSON(file = "text1.json")
+> Results
+$ID
+[1] "1" "2" "3" "4" "5" "6" "7" "8"
+
+$Name
+[1] "Rick"     "Dan"      "Michelle" "Ryan"     "Gary"     "Nina"     "Simon"   
+[8] "Guru"    
+ 
+ Read 2nd file
+ library("rjson")
+> Movies <- fromJSON(file = "text2.json")
+> 
+> movies
+$name
+[1] "Avengers Infinity war" "Thor"                 
+
+$release_date_local
+[1] "april" "Jan"  
+
+$title
+[1] "3" "2
+similarly Read 3rd file
+Nmaes <-fromjson (file = "text3.json")
+
+
+2. Parse the following JSON into a data frame
+js<-'{
+"name": null, "release_date_local": null, "title": "3 (2011)",
+"opening_weekend_take": 1234, "year": 2011,
+"release_date_wide": "2011-09-16", "gross": 59954
+}'
