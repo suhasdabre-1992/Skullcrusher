@@ -14,7 +14,6 @@ $Name
  Read 2nd file
  library("rjson")
 > Movies <- fromJSON(file = "text2.json")
-> 
 > movies
 $name
 [1] "Avengers Infinity war" "Thor"                 
@@ -26,8 +25,7 @@ $title
 [1] "3" "2
 similarly Read 3rd file
 Nmaes <-fromjson (file = "text3.json")
-
-
+-------------------------------------------------------------------------------------------------------------------
 2. Parse the following JSON into a data frame
 js<-'{
 "name": null, "release_date_local": null, "title": "3 (2011)",
@@ -41,3 +39,14 @@ Ans:-
 1 null               null 3 (2011)                 1234 2011        2011-09-16
   gross
 1 59954
+-------------------------------------------------------------------------------------------------------------------
+3.Write a script for variable binning using R.
+data <- iris
+str(data)
+str(bin(data))
+str(bin(data, nbins = 3))
+str(bin(data, nbins = 3, labels = c("small", "medium", "large")))
+
+## Difference between methods "length" and "content"
+set.seed(1); table(bin(rnorm(900), nbins = 3))
+set.seed(1); table(bin(rnorm(900), nbins = 3, method = "content"))
