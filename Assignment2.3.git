@@ -1,0 +1,9 @@
+1. How to Import SAS XPORT Files into R With The foreign package.
+ans:-Read.xport function is provided in foregin package to read/Import SAS Xport files R.
+
+2.How To Import SAS Files into R With The haven Package?
+Ans: Read_sas() function is used in haven package to read SAS files in r.
+
+3.How to read Weka Attribute-Relation File Format (ARFF) files in R?
+
+How to read a heavy csv/tsv file using readr package?
