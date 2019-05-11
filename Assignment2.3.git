@@ -5,5 +5,11 @@ ans:-Read.xport function is provided in foregin package to read/Import SAS Xport
 Ans: Read_sas() function is used in haven package to read SAS files in r.
 
 3.How to read Weka Attribute-Relation File Format (ARFF) files in R?
+Ans: Read.arff(file) function is used to read Weka ARFF file in R
 
+E.g: read.arff(system.file("arff", "contact-lenses.arff",
+                      package = "RWeka"))
+                      
+                      
 How to read a heavy csv/tsv file using readr package?
+Ans: Read_delim function is used to read csv/tsv files with readr package.
