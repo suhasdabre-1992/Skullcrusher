@@ -26,3 +26,13 @@ uni2<-intersect(vec1,vec2)
 [1] "Merc 280"           "Merc 280C"          "Merc 450SE"        
 [4] "Merc 450SL"         "Merc 450SLC"        "Cadillac Fleetwood"
 > 
+3. Get the difference of the elements between two
+character vectors.
+Ans:-
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[10:32,]))
+> uni3<-setdiff(vec1,vec2)
+> uni3
+[1] "Mazda RX4"         "Mazda RX4 Wag"     "Datsun 710"        "Hornet 4 Drive"   
+[5] "Hornet Sportabout" "Valiant"           "Duster 360"        "Merc 240D"        
+[9] "Merc 230"
