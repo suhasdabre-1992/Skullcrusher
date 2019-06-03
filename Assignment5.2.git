@@ -36,3 +36,11 @@ vec2 = c(rownames(mtcars[10:32,]))
 [1] "Mazda RX4"         "Mazda RX4 Wag"     "Datsun 710"        "Hornet 4 Drive"   
 [5] "Hornet Sportabout" "Valiant"           "Duster 360"        "Merc 240D"        
 [9] "Merc 230"
+
+4. Test the equality of two character vectors
+Ans:-
+vec1 = c(rownames(mtcars[1:15,]))
+vec2 = c(rownames(mtcars[11:25,]))
+uni4<-all.equal(vec1,vec2)
+> uni4
+[1] "15 string mismatches"
