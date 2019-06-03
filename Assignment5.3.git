@@ -20,5 +20,45 @@ vec1 = c(rownames(mtcars[1:15,]))
 [13] "Merc 450SL"         "Merc 450SLC"        "Valiant" 
 
 #Descending order for vec1
+> vec1 = c(rownames(mtcars[1:15,]))
+> Asce4<-sort(vec1, decreasing = TRUE)
+> Asce4
+ [1] "Valiant"            "Merc 450SLC"        "Merc 450SL"        
+ [4] "Merc 450SE"         "Merc 280C"          "Merc 280"          
+ [7] "Merc 240D"          "Merc 230"           "Mazda RX4 Wag"     
+[10] "Mazda RX4"          "Hornet Sportabout"  "Hornet 4 Drive"    
+[13] "Duster 360"         "Datsun 710"         "Cadillac Fleetwood
 
+#Ascending order for Vec2
+> vec2 = c(rownames(mtcars[11:25,]))
+> Asce2<-sort(vec2)
+> Asce2
+ [1] "AMC Javelin"         "Cadillac Fleetwood"  "Camaro Z28"         
+ [4] "Chrysler Imperial"   "Dodge Challenger"    "Fiat 128"           
+ [7] "Honda Civic"         "Lincoln Continental" "Merc 280C"          
+[10] "Merc 450SE"          "Merc 450SL"          "Merc 450SLC"        
+[13] "Pontiac Firebird"    "Toyota Corolla"      "Toyota Corona"      
+>
+#Descending order for vec2
+> Asce3<-sort(vec2, decreasing = TRUE)
+> Asce3
+ [1] "Toyota Corona"       "Toyota Corolla"      "Pontiac Firebird"   
+ [4] "Merc 450SLC"         "Merc 450SL"          "Merc 450SE"         
+ [7] "Merc 280C"           "Lincoln Continental" "Honda Civic"        
+[10] "Fiat 128"            "Dodge Challenger"    "Chrysler Imperial"  
+[13] "Camaro Z28"          "Cadillac Fleetwood"  "AMC Javelin"
+
+3.What is the major difference between str c() and paste()
+show an example.
+Ans:-
+Paste() function is from base package whereas str_c() comes from the stringer package.
+paste(..., sep="", collapse = NULL) you can apply some sort of separator with this function whereas a single space is default,
+str_c(..., sep="", collapse = NULL)in this the default is no separator.
+
+4. Introduce a separator when concatenating the strings
+Ans:-
+library(tidyverse)
+vec1 = c(rownames(mtcars[1:15,]))
 vec2 = c(rownames(mtcars[11:25,]))
+reprex_df<-data.frame(vec1,vec2)
+reprex_df %>% mutate(new_col=paste(vec1, vec2,sep = "+"))
