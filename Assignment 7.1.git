@@ -1,0 +1,11 @@
+1. Histogram for all variables in a dataset mtcars.
+-Write a program to create histograms for all columns
+Ans:-
+library(tidyverse)
+mtcars %>% gather() %>% head()
+ggplot(gather(mtcars), aes(value)) + 
+  geom_histogram(bins = 10) + 
+  facet_wrap(~key, scales = 'free_x')
+  
+  
+  
