@@ -1,0 +1,24 @@
+A.Create a visual
+Ans:-
+library("VIM")
+library("dplyr")
+library("ggplot2")
+library("gridExtra")
+Mnar_data<-data.frame (read.csv ())
+set.seed(2)
+mnar_data <- data.frame(x = rnorm(100), y = rnorm(100)) %>%
+    mutate(y_miss = ifelse(y > 1, y, NA),
+           y = ifelse(is.na(y_miss), y, NA),
+           x_miss = ifelse(is.na(y), x, NA))
+  grid.arrange(
+  # Plot highlighting missing data points
+  ggplot(mnar_data, aes(x, y)) +
+    geom_point(size = 4, alpha = 0.6) +
+    geom_point(aes(x, y_miss), col = "red", size = 4, alpha = 0.6) +
+    geom_hline(aes(yintercept = y_miss), col = "red", alpha = 0.6,
+               linetype = "dashed") +
+    ylim(NA, max(mnar_data$y_miss, na.rm = TRUE)) +
+    ggtitle("Where the data points are missing"),
+ 
+ B./
+
