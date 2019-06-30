@@ -20,5 +20,30 @@ mnar_data <- data.frame(x = rnorm(100), y = rnorm(100)) %>%
     ylim(NA, max(mnar_data$y_miss, na.rm = TRUE)) +
     ggtitle("Where the data points are missing"),
  
- B./
+ B.boxplot(Bank$job, horizontal = T, main="JOB DISTRIBUTION")
+ Ans:
+ #load bank data
+Bank <-read.csv(file.choose(), header = T)
+Bank
+boxplot(Bank$job, horizontal = T, main="JOB DISTRIBUTION")
+
+C.Check whether is there any relation between Job and Marital
+Status?
+ #load bank data
+Bank <-read.csv(file.choose(), header = T)
+Bank
+with(bank, cor(job,marital))
+
+D.Check whether is there any association between Job and
+Education?
+Ans:-
+#load bank data
+Bank <-read.csv(file.choose(), header = T)
+Bank
+with(bank, cor(job,education))
+
+
+
+
+
 
