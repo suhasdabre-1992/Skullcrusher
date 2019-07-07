@@ -1,0 +1,24 @@
+a. Find out top 5 attributes having highest correlation (select
+only Numeric features).
+Ans:-
+> my_data<-read.csv('https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data')
+library (Caret)
+>findCorrelation(my_data, cutoff = 0.5, Names = TRUE,
+  exact = TRUE)
+  
+b. Find out top 3 reasons for having more crime in a city.
+
+
+c. Which all attributes have high correlation with crime rate?
+only_no <- my_data[,-127]
+str(my_data)
+
+high_cor <- cor(only_no)
+
+for (i in 1:nrow(high_cor)){
+  correlations <-  which((high_cor[i,] > 0.85) & (high-cor[i,] != 1))
+  if(length(correlations)> 0){
+    print(colnames(my_data)[i])
+    print(correlations)
+  }
+}
