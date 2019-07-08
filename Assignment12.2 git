@@ -1,7 +1,25 @@
 Perform the below operations:
-a. Visualize the correlation between all variable in a meaningful
+A. Visualize the correlation between all variable in a meaningful
 way, clear representation of correlations. Find out top 3
 reasons for having more crime in a city.
-b. What is the difference between covariance and correlation,
+Ans:-
+>install.packages(Corrplot)
+>Library(corrPlot)
+>My_data<- read.csv(choose file())
+>Crime_cor <- Cor(My_data)
+>Corrplot (Crime_cor, method= "number")
+>findCorrelation(x, cutoff = 0.3, names = FALSE,
+  exact = TRUE)
+
+B. What is the difference between covariance and correlation,
 take an example from this dataset and show the differences if
 any?
+Ans:- 
+>Covariances are very important throughout finance, but they are not scale free and they can be difficult to directly interpret. 
+Correlation is the standardized version of covariance that ranges in value from -1 to 1, where values close to 1 in magnitude
+indicate a strong linear relationship between pairs of variables.
+>Install.packages(caret)
+>library(Caret)
+>My_data<- read.csv(choose file())
+>cov(My_data)
+>cor(My_data)
