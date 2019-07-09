@@ -5,7 +5,7 @@ reasons for having more crime in a city.
 Ans:-
 >install.packages(Corrplot)
 >Library(corrPlot)
->My_data<- read.csv(choose file())
+>my_data<-read.csv('https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data')
 >Crime_cor <- Cor(My_data)
 >Corrplot (Crime_cor, method= "number")
 >findCorrelation(x, cutoff = 0.3, names = FALSE,
@@ -20,6 +20,8 @@ Correlation is the standardized version of covariance that ranges in value from 
 indicate a strong linear relationship between pairs of variables.
 >Install.packages(caret)
 >library(Caret)
->My_data<- read.csv(choose file())
->cov(My_data)
->cor(My_data)
+>my_data<-read.csv('https://archive.ics.uci.edu/ml/machine-learning-databases/communities/communities.data')
+>New_Cov<-cov(My_data)
+>New_Cor<-cor(My_data)
+>Corrplot (New_cor, New_Cove method= "Square")
+
