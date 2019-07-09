@@ -1,0 +1,14 @@
+library(Hmisc)
+zee_file<-read.csv(getZip('https://archive.ics.uci.edu/ml/machine-learning-databases/00304/BlogFeedback.zip'))
+a. Read the dataset and identify the right features.
+library(Hmisc)
+zip_file<-read.csv(getZip('https://archive.ics.uci.edu/ml/machine-learning-databases/00304/BlogFeedback.zip'))
+
+b. Clean dataset, impute missing values and perform exploratory data
+analysis.
+
+
+c. Visualize the dataset and make inferences from that.
+
+d. Perform any 3 hypothesis tests using columns of your choice, make
+conclusions.
