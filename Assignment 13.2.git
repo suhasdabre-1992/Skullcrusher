@@ -9,7 +9,22 @@ fair.
 
 a. Create a linear regression model to predict the number of comments
 in the next 24 hours (relative to base time).
+install.packages(Hmisc)
+library(Hmisc)
+zip_file<-read.csv(getZip('https://archive.ics.uci.edu/ml/machine-learning-databases/00304/BlogFeedback.zip'))
+zip_file
+#ScatterPlot
+scatter.smooth(x=zip_file$C1, y=zip_file$C2, main="C1 ~C2")
+
+
 b. Fine tune the model and represent important features Visualize the
 dataset and make inferences from that.
+
 c. Interpret the summary of the linear model.
+Ans:-
+set.seed(122)
+C1.c = scale(zip_file$C1, center=TRUE, scale=FALSE)
+mod1 = lm(formula = dist ~ C1.c, data =zip_file )
+summary(mod1)
+
 d. Report the test accuracy vs. the training accuracy
