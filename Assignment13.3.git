@@ -8,4 +8,16 @@ the underlying time intervals may overlap. Therefore, you should use the provide
 temporally disjoint train and test splits to ensure that the evaluation is fair.
 
 a. Interpret the final model coefficients.
+Install.packages ("tidyverse")
+library(tidyverse)
+zip_file<- Read.table(unz(https://archive.ics.uci.edu/ml/machine-learning-databases/00304/blogfeedback.zip))
+head(zipfile)
+# build a model
+model <- lm(Data ~ Clm1 +Clm2 + Clm3, data = zip_file)
+summary(model)
+summary(model)$coefficient
+
 b. Plot the model result and compare it with assumptions of the model.
+Install.packages(ggplot2)
+library(ggplot2)
+ggplot(p, aes(x, y.fit)) + geom_smooth() + geom_point(size=4, shape=1, alpha=0.6)
