@@ -15,3 +15,9 @@ scatterplot(~gear,data=mtcars,
    main="Simple Scatterplot Matrix")
    
 3. Write a program to create a plot density by class variable.
+library(ggplot2)
+str(mtcars)
+#Density plot with Default bandwidth.
+plot(density(mtcars$class))
+#Using a smaller bandwidth shows the heaping at 2 and 4 minutes:
+plot(density(mtcars$class, bw = 0.05))
