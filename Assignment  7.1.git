@@ -1,4 +1,36 @@
 1. Histogram for all variables in a dataset mtcars.
+
+Ans:-
+library(tidyverse)
+mtcars %>% gather() %>% head()
+ggplot(gather(mtcars), aes(value)) + 
+  geom_histogram(bins = 10) + 
+  facet_wrap(~key, scales = 'free_x')
+
 Write a program to create histograms for all columns
+Ans:-
+library(ggplot2)
+library(tidyr)
+mtcars %>% gather() %>% head()
+ggplot(gather(mtcars), aes(value)) + 
+  geom_histogram(bins = 10) + 
+  facet_wrap(~key, scales = 'free_x')
+
 2. Check the probability distribution of all variables in mtcars.
+library(ggplot2)
+library(tidyr)
+Str(mtcars)
+mtcars
+#Probability distribution of 1 variable
+hist(mtcars$mpg)
+#Probability distribution of all variables
+hist(mtcars, xlab = "Weight",col = "yellow",border = "blue")
+
 3. Write a program to create boxplot for all variables.
+Ans:-Boxplots can be created for individual variables or for variables by group. 
+library(ggplot2)
+library(tidyr)
+Str(mtcars)
+# Boxplot of MPG by Car Cylinders 
+boxplot(mpg~cyl,data=mtcars, main="Car Milage Data", 
+   xlab="Number of Cylinders", ylab="Miles Per Gallon")
