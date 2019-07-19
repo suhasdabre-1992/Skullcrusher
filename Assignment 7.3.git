@@ -1,1 +1,18 @@
 1. Create a box and whisker plot by class using mtcars dataset.
+Ans:-
+library(ggplot2)
+library(xtable)
+Str(mtcars)
+head(mtcars)
+#boxplot
+p <- ggplot(data = mtcars, aes(x = cyl, y = mpg, fill = cyl))
+p <- p + geom_boxplot() + 
+  ggtitle("Car Milage Data") + 
+  labs(x = "Number of Cylinders", y = "Miles Per Gallon") + 
+  scale_fill_discrete(name = "Cylinders")
+  
+  #whisker plot
+  b <- boxplot(mpg ~ cyl, data = mtcars[mtcars$cyl == 8,])
+  b$stats
+  
+  
