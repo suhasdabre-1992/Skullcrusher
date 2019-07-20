@@ -7,6 +7,14 @@ titles that represent families and represent using appropriate
 visualization graph.
 b. Represent the proportion of people survived by family size
 using a graph.
+Ans:-
+ Discretize family size
+full$FsizeD[full$Fsize == 1] <- 'singleton'
+full$FsizeD[full$Fsize < 5 & full$Fsize > 1] <- 'small'
+full$FsizeD[full$Fsize > 4] <- 'large'
+
+# Show family size by survival using a mosaic plot
+mosaicplot(table(full$FsizeD, full$Survived), main = 'Family size by survival', shade = TRUE)
 
 c. Impute the missing values in Age variable using Mice library,
 create two different graphs showing Age distribution before
