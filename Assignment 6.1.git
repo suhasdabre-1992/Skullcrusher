@@ -5,6 +5,11 @@ Perform the below operations:
 a. Pre-process the passenger names to come up with a list of
 titles that represent families and represent using appropriate
 visualization graph.
+Ans:-
+install.packages(readxl)
+library(readxl)
+ship_data1<-my_data <- read_excel(file.choose())
+
 b. Represent the proportion of people survived by family size
 using a graph.
 Ans:-
@@ -19,3 +24,9 @@ mosaicplot(table(full$FsizeD, full$Survived), main = 'Family size by survival', 
 c. Impute the missing values in Age variable using Mice library,
 create two different graphs showing Age distribution before
 and after imputation
+Ans:-
+install.packages(mice)
+library(mice)
+Imputing the missing data
+tempData <- mice(Ship_data,m=5,maxit=50,meth='pmm',seed=500)
+summary(Ship_data)
